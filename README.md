@@ -2,19 +2,19 @@
 
 + [task3-三栏式布局](http://ife.baidu.com/course/detail/id/94)
 
-#Requirements
+# Requirements
 
 + 掌握position与float的概念以及在布局时的用法
 + 左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。
   背景色为 #eee 区域的高度取决于三个子元素中最高的高度。
 + 改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。
 
-#Task
+# Task
 
 + [task3 preview](https://codepen.io/zhongshanxian/pen/mWVPWV?editors=1100)
 + [task3 source code]()
 
-###html
+### html
 
 ```html
 <div id="main">
@@ -60,7 +60,7 @@
 </footer>
 ```
 
-###css
+### css
 
 ```css
 <style type="text/css">
@@ -144,7 +144,7 @@
 	</style>
 ```
 
-#Notes
+# Notes
 + CSS设计指南（第三版）
 + [float属性](http://www.runoob.com/cssref/pr-class-float.html)
 + 要在流动栏的左右侧流出足够的空间给旁边两栏
