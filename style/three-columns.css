@@ -1,0 +1,85 @@
+* 
+{
+  margin:0;
+  padding:0;
+}
+#main 
+{
+  width:auto;/*根据里面的三栏宽度而改变*/
+  float:left;/*三栏都浮动，若父元素不浮动，则溢出*/
+  margin:20px;
+  background-image:url(http://pic.baike.soso.com/p/20130522/20130522171955-500631263.jpg);
+  padding:20px;
+  border:2px solid #558B8B;
+}
+#two-columns
+{
+  float:left;
+  width:100%;/*在预留位置后，充满*/
+  margin-right:-195px;/*为右边栏腾出空间*/
+}
+#team
+{
+  width:200px;
+  float:left;
+  border:2px solid #ccc;
+  background:white;
+  padding:15px;
+  box-sizing:border-box;
+}
+#team p
+{
+  padding-top:35px;
+  text-shadow:0 0 1px #f77;
+}
+#team img
+{
+  float:left;
+}
+#introduce
+{
+  width:auto;/*div中，除去第一栏的空间，剩下第二栏auto*/
+  border:2px solid #ccc;
+  background:white;
+  margin-left:220px;
+  margin-right:215px;
+  padding:20px;
+  box-sizing:border-box;
+}
+#introduce p
+{
+  text-indent:2em;/*缩进*/
+}
+#team > a:link{color:#A52A2A;text-decoration:none;}
+h4 > a:link{color:#6495ED;text-decoration:none;}
+.first-letter
+{
+  color:#008B00;
+}
+#person
+{
+  width:150px;
+  float:left;
+  border:2px solid #ccc;
+  background:white;
+  padding:20px;
+}
+#person img
+{
+  margin:15px 20px 12px 20px;
+  box-shadow:0 0 7px black;
+}
+footer
+{
+  font-size:12px;
+  text-align:center;
+}
+/*小屏显示滚动条*/
+@media only screen and (max-width:959px)
+{
+  body
+  {
+    overflow-x:scroll;
+    width:944px;
+  }
+}
