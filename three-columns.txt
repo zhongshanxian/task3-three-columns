@@ -2,7 +2,7 @@
 1.[position的可选值](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)
 1.相对定位元素relative：未脱离文档流，相对于元素本来在的位置的偏移
 2.绝对定位元素absolute：脱离了文档流，绝对定位元素不占据空间。绝对定位元素相对于最近的非static祖先元素定位。当这样的祖先元素不存在时，则相对于根级容器定位。
-3.固定定位fixed：元素的包含块为 viewport 视口，滚动屏幕时仍固定在相同位置
+3.固定定位fixed：盒子固定定位是相对于浏览器窗口而不是设置了相对定位的父元素。，滚动屏幕时仍固定在相同位置
 4.粘性定位元素sticky：粘性定位是相对定位和固定定位的混合，粘性定位常用于定位字母列表的头部元素。
 5.全局值：inherit; initial; unset;
 
@@ -25,8 +25,21 @@
 5.inline-end：元素必须在其包含块的末端浮动。这是右边的ltr脚本，左边是rtl脚本。
 6.全局值：inherit; initial; unset;
 7.清除浮标：
-下一个元素一直向左对齐 [clear: both;](http://www.barelyfitz.com/screencast/html-training/css/positioning/)
-[more methods](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use)
+clear both：在容器的末尾添加一个空标签，设置CSS {clear：both}
+overflow:auto:在父元素中设置CSS {overflow:auto}
+clearfix:在父元素中设置CSS
+.boxpar:before,
+.boxpar:after {
+  content: "";
+  display: table;/*创建一个匿名的“table-cell”元素*/
+}
+.boxpar:after {
+  clear: both;/*防止子元素的底部的外边距塌陷*/
+}
+.boxpar{/*IE6和7*/
+  *zoom: 1;
+}
+[more info](http://www.w3cplus.com/css/advanced-html-css-lesson2-detailed-css-positioning.html)
 
 Notes：
 1.三栏的父元素，不能直接规定width
